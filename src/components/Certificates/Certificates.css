@@ -1,0 +1,74 @@
+.certificates_background{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+}
+
+.certificates_heading{
+    color:white;
+    padding-top: 5%;
+    border-bottom: 2px solid white;
+    width:20%
+}
+
+.sidebar_section{
+    width:20%;
+}
+
+.certificates_section{
+    width:70%;
+}
+
+.certificates_input::placeholder{
+    color:white
+}
+
+.empty_certificates_div{
+    margin:20% auto;
+    color:white;
+    text-align: center;
+}
+
+.explore_opportunities_div{
+    border:2px solid black;
+    background-color: white;
+    color:black;
+    padding: 1%;
+    width: 20%;
+    margin:2% auto;
+    border-radius: 30px
+}
+
+
+/* small screens */
+
+@media (max-width:500px){
+
+    .sidebar_section{
+        display: none;
+    }
+    
+    .certificates_section{
+        width:100%
+    }
+
+    .certificates_heading{
+        width:50%;
+        margin-left:1%
+    }
+
+    .certificates_input_div{
+        width:90%;
+        margin-top: 4%;
+        margin-left:5%
+    }
+    
+    .empty_certificates_div{
+        margin:50% auto;
+    }
+
+    .explore_opportunities_div{
+        width:90%
+    }
+
+}

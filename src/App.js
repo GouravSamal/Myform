@@ -4,6 +4,7 @@ import EditProfile from './components/EditProfile';
 import Post from './components/Post/Post';
 import UserProfile from './components/User_Profile/UserProfile';
 import Quiz from './components/Quiz/Quiz';
+import Certificates from './components/Certificates/Certificates';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
     {/* <EditProfile/> */}
     {/* <Post/> */}
     {/* <UserProfile/> */}
-    <Quiz/>
+    {/* <Quiz/> */}
+    <Certificates/>
    </div>
   );
 }
