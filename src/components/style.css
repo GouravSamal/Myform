@@ -1,0 +1,521 @@
+.background_screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:linear-gradient(90deg, rgba(97,25,132,1) 0%, rgba(220,38,72,1) 47%, rgba(220,38,72,1) 100%);
+  }
+  
+  .educationalDetails_container{
+    width:60%;
+    height:auto;
+    border:1px solid black;
+    border:none; 
+    border-radius: 20px;
+    color:white;
+    padding-bottom: 20px;
+    position:relative;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+  }
+  
+  .cross_icon{
+    position:absolute;
+    top:5px;
+    right:10px;
+    color:black;
+    cursor: pointer;
+  }
+  
+  input{
+    width:90%;
+    height:40px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius:10px;
+    border:none;
+  }
+  
+  .educationalDetails_container > h2{
+    margin-left: 50px;
+  }
+  
+  .required{
+    margin-left: 3px;
+    color:black;
+  }
+  
+  .qualification_select{
+    width:90%;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  
+  /* Eduacations contents */
+  .educationalDetails_contents{
+    margin-left:50px;
+    margin-right: 50px;
+  }
+  
+  
+  /* Educations details First Div*/
+  .educationalDetails_firstDiv{
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .educationalDetails_leftdiv{
+    /* border:2px solid blue; */
+    width:40%;
+  }
+  
+  .educationalDetails_rightdiv{
+    /* border:2px solid green; */
+    width:40%;
+  }
+  
+  
+  
+  /* Educational Details Middle div */
+  
+  .educationalDetails_middleDiv > input{
+    width:95%;
+  }
+  
+  
+  
+  /* Education details last Div */
+  .educationalDetails_lastDiv{
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 45px;
+  }
+  
+  .educationalDetails_lastDiv_input{
+    width:100%;
+    /* border:2px solid green; */
+  }
+  
+  
+  
+  
+  
+  /* Prev Next Button */
+  .prevNextDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .prevNextChildDiv{
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .prevNextChildDiv > button{
+    width:100px;
+    padding:10px;
+    border-radius: 15px;
+    color:white;
+    font-size: 25px;
+    margin-left: 10px;
+    background-color: black;
+  }
+  
+  .prevNextChildDiv > button:hover{
+    cursor: pointer;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width:550px){
+  
+    .educationalDetails_container{
+      width:100%;
+      border:none
+    }
+  
+    .qualification_select{
+      width:100%
+    }
+  
+    input{
+      width:90%
+    }
+  
+    .educationalDetails_leftdiv{
+      width:100%;
+    }
+  
+    .educationalDetails_rightdiv{
+      width:100%;
+    }
+  
+    .educationalDetails_firstDiv{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .educationalDetails_lastDiv{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .educationalDetails_middleDiv{
+      width:98%
+    }
+  
+    .educationalDetails_lastDiv_input{
+      width:100%;
+    }
+  
+    .educationalDetails_middleDiv > input{
+      width:100%
+    }
+  
+    .educationalDetails_lastDiv{
+      width:95%
+    }
+  
+  }
+  
+  @media (min-width:1050px ) and (max-width:1650px){
+  
+    .educationalDetails_container{
+      width:80%
+    }
+  
+    .educationalDetails_middleDiv > input{
+      width:100%;
+    }
+  
+    .qualification_select{
+      width:100%
+    }
+  
+    input{
+      width:80%;
+    }
+  
+    .educationalDetails_lastDiv{
+      /* border:2px solid green; */
+      margin-right: -5px;
+    }
+  
+  }
+  
+  @media (min-width:800px ) and (max-width:1050px){
+  
+    .educationalDetails_lastDiv{
+      margin-right: -30px;
+    }
+  
+    .educationalDetails_lastDiv_input{
+      width:80%;
+    }
+  
+    .educationalDetails_middleDiv > input{
+      width:98%;
+    }
+  
+  }
+  
+  @media (min-width:550px ) and (max-width:800px){
+  
+    .educationalDetails_container{
+      width:90%;
+    }
+  
+    .educationalDetails_lastDiv_input{
+      width:80%;
+    }
+  
+    .educationalDetails_middleDiv > input{
+      width:95%;
+    }
+  
+    .educationalDetails_lastDiv{
+      margin-right: -10px;
+    }
+  
+  }
+  
+  
+  /* **************************************************** */
+  /* **************************************************** */
+  /* **************************************************** */
+  /* **************************************************** */
+  
+  
+  /************  EDIT PROFILE  ************/
+  
+  .editprofile_container{
+    width:90%;
+    height:auto;
+    /* border:1px solid black;  */
+    border-radius: 20px;
+    color:white;
+    padding-bottom: 20px;
+    position:relative;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+  }
+  
+  .editProfile_header{
+    margin-left: 20px;
+  }
+  
+  .profileDiv
+  {
+    /* border:2px solid black; */
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 300px;
+  }
+  
+  .profileformDiv
+  {
+    margin-top:2px;
+    width:60%;
+    /* border:2px solid black; */
+  }
+  
+  .profilePicDiv
+  {
+    margin-top: 2px;
+    width:30%;
+    /* border:2px solid black; */
+  }
+  
+  .name_div{
+    display:flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right:15px;
+  }
+  
+  .emailDiv{
+    margin-left: 15px;
+  }
+  
+  .emailDiv > input{
+    width:98%
+  }
+  
+  .contactGenderDiv{
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: space-between;
+  }
+  
+  .gender_select{
+    width:200px;
+    height:45px;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .profilePicDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profileImage{
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+  }
+   
+  .dateofbirth{
+    margin-left: 15px;
+  }
+  
+  .day_select,.month_select,.year_select{
+    width:100px;
+    height:40px;
+    border-radius: 7px;
+    margin-right: 3px;
+  }
+  
+  .dob{
+    width:98%
+  }
+  
+  
+  /* media query for small screen */
+  
+  /* @media (max-width:550px){
+  
+    .editprofile_container{
+      width:100%
+    }
+  
+    .profileDiv{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+  
+    .profileformDiv{
+      width:95%
+    }
+  
+    input{
+      width:90%
+    }
+  
+    .profilePicDiv{
+      width:38%;
+      margin: 50px auto 0px;
+    }
+  
+    .contactGenderDiv{
+      margin-right: 35px;
+    }
+  
+    .gender_select{
+      width:100%;
+      height:45px;
+    }
+  
+    .cross_icon{
+      position: absolute;
+      top:20px;
+      right:45px;
+    }
+  
+    .day_select,.month_select,.year_select{
+      width:30%;
+    }
+  
+    .emailDiv > input{
+      width:90%
+    }
+  
+  } */
+  
+  @media (max-width:550px){
+  
+    .editprofile_container{
+      width:100%;
+    }
+  
+    label{
+      width:100%
+    }
+  
+    input{
+      width:100%
+    }
+  
+    .profileformDiv{
+      width:100%
+    }
+  
+    .name_div{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .contactGenderDiv{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .gender_select{
+      width:100%
+    }
+  
+    .cross_icon{
+      position: absolute;
+      top:20px;
+      right:20px;
+    }
+  
+    .day_select,.month_select,.year_select{
+      width:31%;
+    }
+  
+    .emailDiv > input{
+      width:92%
+    }
+  
+    .profileImage{
+      width:100px;
+      height:100px;
+    }
+  
+    .profilePicDiv{
+      margin-top: -200px;
+    }
+  
+    .profileDiv{
+      margin-bottom:5px
+    }
+  
+  }
+  
+  /* media query for tablets */
+  @media (min-width:550px ) and (max-width:850px){
+  
+    .editprofile_container{
+      width:100%
+    }
+  
+    input{
+      width:90%
+    }
+  
+    .gender_select{
+      width:100%;
+      height:45px;
+    }
+  
+    .emailDiv{
+      margin-right:30px
+    }
+  
+    .contactGenderDiv{
+      margin-right: 30px;
+    }
+  
+    .day_select,.month_select,.year_select{
+      width:30%;
+    }
+  
+    .cross_icon{
+      position: absolute;
+      top:20px;
+      right:45px;
+    }
+  
+  }
+  
+  
+  /* media query for other screens */
+  @media (min-width:850px ) and (max-width:1600px){
+  
+    .editprofile_container{
+      width:100%
+    }
+  
+    input{
+      width:100%
+    }
+  
+  
+  }
+  
+  /* **************************************************** */
+  /* **************************************************** */
+  /* **************************************************** */
+  /* **************************************************** */

@@ -1,0 +1,122 @@
+.post_background {
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(97, 25, 132, 1) 0%, rgba(220, 38, 72, 1) 47%, rgba(220, 38, 72, 1) 100%);
+    display: flex;
+}
+
+.sidebar{
+    width:20%;
+    border-right:2px solid black;
+}
+
+.post{
+    width:65%;
+    margin-top:4%
+}
+
+.my_post_heading{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.ads{
+    width:15%;
+    margin-top: 4%;
+    margin-right: 1%;
+}
+
+
+.adCard{
+    margin-top:10%;
+    margin-right: 1%;
+    color:white;
+    border-radius: 5%;
+    text-align: center;
+    background-color: rgba(56, 20, 20, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.ad_image{
+    width:100%;
+}
+
+.post_container {
+    width: 70%;
+    padding: 3%;
+    height: auto;
+    border: 1px solid black;
+    border: none;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: white;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: rgba(56, 20, 20, 0.2);
+    backdrop-filter: blur(8px);
+    margin-bottom: 50px;
+}
+
+.postcard {
+    width: 100%
+}
+
+.postimage {
+    height: 30vh;
+    width: 50vh;
+    margin: 0 auto;
+}
+
+.profileimage {
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+.plot_topinfo {
+    display: flex;
+}
+
+.postcard_footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons {
+    cursor: pointer;
+}
+
+/**********************************/
+/**********************************/
+/**********************************/
+/**********************************/
+
+/* small screen phones */
+
+@media (max-width: 500px) {
+    .post_container {
+        width: 100%
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .post{
+        width:100%
+    }
+
+    .ads{
+        display: none;
+    }
+}
+
+
+@media (min-width:500px) and (max-width: 1000px) {
+    
+    .ads{
+        width:30%
+    }
+
+}

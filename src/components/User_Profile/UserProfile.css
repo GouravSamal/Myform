@@ -1,0 +1,201 @@
+.userprofile_container{
+   background-color: black; 
+}
+
+.top_block{
+    height:10vh;
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%);
+    display: flex;
+    justify-content: space-between;
+    padding-top:1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* .search_bar{
+    position: relative;
+} */
+
+/* .search_icon{
+    position: absolute;
+    top: 25%;
+    left:5%
+}
+
+.search_cancel{
+    position: absolute;
+    top: 25%;
+    left:135%
+} */
+
+.search_icon{
+    cursor: pointer;
+}
+
+.search_cancel{
+    cursor:pointer
+}
+
+/* bottom block */
+.bottom_block{
+    display: flex;
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%);
+    height:90vh;
+}
+
+/* left block */
+.left_block{
+    width:15%;
+}
+
+/* right block */
+.right_block{
+    width:90%
+}
+
+.user_bio_div{
+    height:25vh;
+    position: relative;
+}
+
+.user_bio_bg_div{
+    height:10vh;
+    background-color: rgb(22, 5, 5);
+    position: relative;
+}
+
+.user_bio_profile_photo{
+    position: absolute;
+    left:5%;
+    top:25%
+}
+
+.user_bio_info_div{
+    height:15vh;
+    position: relative;
+}
+
+.user_bio_info_details{
+    position: absolute;
+    top:30%;
+    left:5%;
+}
+
+.social_media_icons{
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.abc{
+    color:rgb(3, 50, 82);
+}
+
+.user_details_div{
+    /* height:65vh; */
+}
+
+.user_details_1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.user_details_2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.user_details_skills{
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%);
+    height:28vh;
+    width:35%;
+}
+
+
+.user_details_sections_top{
+    display: flex;
+    position: relative;
+}
+
+.add_sections_icons{
+    position: absolute;
+    top:20%;
+    left:92%;
+    cursor: pointer;
+}
+
+.user_details_educations{
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%);
+    height:28vh;
+    width:35%;
+}
+
+.user_details_workexperience{
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%);
+    height:28vh;
+    width:35%;
+}
+
+
+
+.user_details_certifications{
+    background: linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%);
+    height:28vh;
+    width:35%;
+}
+
+
+/* Small screens */
+
+@media (max-width:500px){
+
+    .bottom_block{
+        height:auto
+    }
+
+    .left_block{
+        display: none;
+    }
+
+    .right_block{
+        width:100%;
+    }
+
+    .user_details_1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user_details_2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user_details_skills{
+        width:90%;
+        margin:0 auto;
+        margin-bottom: 5%;
+    }
+
+    .user_details_educations{
+        width:90%;
+        margin:0 auto;
+        margin-bottom: 5%;
+    }
+
+    .user_details_workexperience{
+        width:90%;
+        margin:0 auto;
+        margin-bottom: 5%;
+    }
+
+    .user_details_certifications{
+        width:90%;
+        margin:0 auto;
+        margin-bottom: 5%;
+    }
+
+}
