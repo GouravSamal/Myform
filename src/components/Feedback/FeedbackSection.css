@@ -1,0 +1,33 @@
+.feedback_container{
+    background-color: black;
+    padding:3%;
+    color:white;
+}
+
+.feedback_sections{
+    margin-top:3%;
+}
+
+.feedback_sections_heading{
+    display: flex;
+}
+
+.feedback_card{
+    
+}
+
+
+
+.feedback_card_message{
+    text-align: center;
+}
+
+.feedback_bottom{
+    display: flex;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.bottom_pointer{
+    margin-left: 2%;
+}

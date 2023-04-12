@@ -5,6 +5,7 @@ import Post from './components/Post/Post';
 import UserProfile from './components/User_Profile/UserProfile';
 import Quiz from './components/Quiz/Quiz';
 import Certificates from './components/Certificates/Certificates';
+import FeedbackSection from './components/Feedback/FeedbackSection';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
     {/* <Post/> */}
     {/* <UserProfile/> */}
     {/* <Quiz/> */}
-    <Certificates/>
+    {/* <Certificates/> */}
+    <FeedbackSection/>
    </div>
   );
 }
