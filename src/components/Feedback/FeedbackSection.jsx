@@ -95,6 +95,7 @@ export default function FeedbackSection() {
 
             </div>
 
+            {/* Please the update the hover effect on this button */}
             <Center>
                 {
                     !showMoreCards ?  <Button bg="black" px={10} borderWidth={1} mt={10} onClick={ () => setShowMoreCards(!showMoreCards) }>Show less reviews</Button>
