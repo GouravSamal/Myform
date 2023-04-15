@@ -1,0 +1,22 @@
+.coursedetailsform_container{
+    background:black;
+    min-height: 100vh;
+    color:white;
+}
+
+.coursedetailsform{
+    width:70%;
+    margin:auto;
+}
+
+.bottom_section{
+    margin-top:5%
+}
+
+@media (max-width:500px){
+
+    .coursedetailsform{
+        width:100%;
+    }
+
+}

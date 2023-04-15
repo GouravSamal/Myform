@@ -6,6 +6,8 @@ import UserProfile from './components/User_Profile/UserProfile';
 import Quiz from './components/Quiz/Quiz';
 import Certificates from './components/Certificates/Certificates';
 import FeedbackSection from './components/Feedback/FeedbackSection';
+import RegistrationForm from './components/Event/RegistrationForm';
+import CourseDetailsForm from './components/Event/CourseDetailsForm';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
     {/* <UserProfile/> */}
     {/* <Quiz/> */}
     {/* <Certificates/> */}
-    <FeedbackSection/>
+    {/* <FeedbackSection/> */}
+    {/* <RegistrationForm/> */}
+    <CourseDetailsForm/>
    </div>
   );
 }

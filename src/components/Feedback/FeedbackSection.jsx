@@ -31,7 +31,7 @@ export default function FeedbackSection() {
             <div className="feedback_sections">
 
                 <div className='feedback_sections_heading'>
-                    <span disp>
+                    <span>
                         <AiFillStar color="yellow" size={30} />
                     </span>
                     <Heading size="md" ml="1%" mb="2%">4.3 course rating 19K ratings</Heading>
