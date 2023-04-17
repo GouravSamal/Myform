@@ -75,7 +75,7 @@ export default function EditProfile() {
     setGender("");
     setDob();
   }
-  
+
   
   console.log(profileArray);
 

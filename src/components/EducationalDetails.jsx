@@ -243,7 +243,6 @@ export default function EducationalDetails() {
               />
             </FormControl>
             
-
             <FormControl w={{ md: "30%" }}>
               <FormLabel color="black">State *</FormLabel>
               <Input borderWidth={1} type="text"
