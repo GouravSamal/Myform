@@ -242,6 +242,7 @@ export default function EducationalDetails() {
                 onChange={(e) => setCountry(e.target.value)}
               />
             </FormControl>
+            
 
             <FormControl w={{ md: "30%" }}>
               <FormLabel color="black">State *</FormLabel>

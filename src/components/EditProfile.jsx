@@ -76,6 +76,7 @@ export default function EditProfile() {
     setDob();
   }
   
+  
   console.log(profileArray);
 
   return (
