@@ -74,7 +74,6 @@ export default function EditProfile() {
     setPhone("");
     setGender("");
     setDob();
-
   }
   
   console.log(profileArray);

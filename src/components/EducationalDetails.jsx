@@ -265,7 +265,6 @@ export default function EducationalDetails() {
             <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"red", transform: "scale(1.05)" }} color="white" w={{base:"30%",md:"10%"}} borderRadius={25} bg="black" mr="3%">Cancel</Button>
             <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"grey", transform: "scale(1.05)" }} color="white" w={{base:"30%",md:"10%"}} borderRadius={25} bg="black" onClick={handleSubmit}>Save</Button>
           </Center>
-
         </Box>
 
       </Box>
