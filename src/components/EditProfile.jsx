@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import './style.css';
+
+import { 
+  Button,
+  Input,
+  FormControl,
+  FormLabel,
+  Select,
+  Flex,
+  Heading,
+  Image,
+  Center,
+  Box,
+  Avatar
+ } from '@chakra-ui/react';
+
 import { RxCross1 } from 'react-icons/rx';
 
 export default function EditProfile() {
@@ -66,134 +80,95 @@ export default function EditProfile() {
   console.log(profileArray);
 
   return (
-    <div className='background_screen'>
-      <form className='editprofile_container'>
+    <Flex justifyContent={"center"} align={"center"}>
 
-        <span className='cross_icon'><RxCross1 /></span>
+      <Box w={{base:"95%",md:"90%"}} pb={{base:"5%",md:"2%"}} mt={{base:"0%",md:"5%"}}  borderRadius={{base:"0px",md:"25px"}} boxShadow={"dark-lg"}>
 
-        <div className='profileDiv'>
+            <Center>
+              <Heading size="xl" mt="1%">Edit Profile</Heading>
+            </Center>
+        {/* <span className='cross_icon'><RxCross1 /></span> */}
 
-          <div className='profileformDiv'>
+        <Flex direction={{base:"column-reverse",md:"row"}} pb="3%" w={{md:"90%",base:"100%"}} >
 
-            <h2 className='editProfile_header'>Edit Profile</h2>
+          <Box w={{base:"100%",md:"60%"}} mt={{base:"5%",md:"1%"}} ml="2%" mr="2%">
 
-            <div className='name_div'>
 
-              <div>
-                <label>First Name<span className='required'>*</span></label>
-                <br />
-                <input type="text"
+            <Flex  mt="1%" direction={{base:"column",md:"row"}} justifyContent={"space-between"} w="100%">
+
+              <FormControl ml={{base:"2%",md:"0%"}} mt="1%" w={{base:"90%",md:"30%"}}>
+                <FormLabel color="black">First Name *</FormLabel>
+                <Input type="text" color="black" 
                   value={firstname}
                   onChange={(e) => setFirstname(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-              <div>
-                <label>Last Name<span className='required'>*</span></label>
-                <br />
-                <input type="text"
+              <FormControl ml={{base:"2%",md:"0%"}} w={{base:"90%",md:"30%"}}> 
+                <FormLabel color="black">Last Name<span className='required'>*</span></FormLabel>
+                <Input type="text" color="black"
                   value={lastname}
                   onChange={(e) => setLastname(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-            </div>
-            {/* name div ends */}
+            </Flex>
 
-            <div className='emailDiv'>
-              <label>Email<span className='required'>*</span></label>
-              <br />
-              <input type="text"
+            <FormControl ml={{base:"2%",md:"0%"}} mt="1%" w={{base:"90%",md:"100%"}}>
+              <FormLabel color="black">Email *</FormLabel>
+              <Input type="text" color="black" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-            </div>
+            </FormControl>
 
-            <div className='contactGenderDiv'>
+            <Flex mt="1%" direction={{ base:"column",md:"row" }} justifyContent={"space-between"} w="100%">
 
-              <div>
-                <label>Contact Number<span className='required'>*</span></label>
-                <br />
-                <input type="text"
+              <FormControl ml={{base:"2%",md:"0%"}} w={{base:"90%",md:"30%"}}>
+                <FormLabel color="black">Contact Number *</FormLabel>
+                <Input type="text" color="black"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-              <div className='genderDiv'>
-                <label className='labels'>Gender<span className="required">*</span></label>
-                <br />
-                <select className='gender_select'
+              <FormControl ml={{base:"2%",md:"0%"}} mt="1%" w={{base:"90%",md:"30%"}}>
+                <FormLabel color="black">Gender *</FormLabel>
+                <Select 
                   onChange={(e) => setGender(e.target.value)}
                   value={gender}>
                   <option value="option 1">-----</option>
                   <option value="Male" >Male</option>
                   <option value="Female" >Female</option>
                   <option value="Others" >Others</option>
-                </select>
-              </div>
+                </Select>
+              </FormControl>
 
-            </div>
+            </Flex>
 
-            <div className='dateofbirth'>
+            <FormControl ml={{base:"2%",md:"0%"}} mt="1%" w={{base:"90%",md:"100%"}}>
+              <FormLabel color="black">Date of Birth *</FormLabel>
+              <Input color="black" type="date" className='dob' value={dob} onChange={(e)=>setDob(e.target.value)}/>
+            </FormControl>
 
-              <label className='labels'>Date of Birth<span className="required">*</span></label>
-              <br />
+          </Box>
 
-              <div>
-                {/* <select className='day_select'
-                  onClick={(e) => setDay(e.target.select)}
-                  value={day}>
-                  <option value="option 1">1</option>
-                  <option value="option 2">2</option>
-                  <option value="option 3">3</option>
-                </select>
+          <Box mt={{base:"5%",md:"5%"}}>
+            <Box color="black" ml="25%">
+              {selectedFile && <Avatar mb="5%" size={{base:"xl",md:"2xl"}} src={preview} />}
+              <Input border={"none"} type="file" w="90%" ml="-15%" onChange={onSelectFile} />
+            </Box>
+          </Box>
 
-                <select className='month_select'
-                  onClick={(e) => setMonth(e.target.select)}
-                  value={month}>
-                  <option value="option 1">January</option>
-                  <option value="option 2">Febrary</option>
-                  <option value="option 3">March</option>
-                </select>
+        </Flex>
 
-                <select className='day_select'
-                  onClick={(e) => setYear(e.target.select)}
-                  value={year}>
-                  <option value="option 1">2001</option>
-                  <option value="option 2">2002</option>
-                  <option value="option 3">2003</option>
-                </select> */}
-                <input type="date" className='dob' value={dob} onChange={(e)=>setDob(e.target.value)}/>
-              </div>
-
-            </div>
-
-          </div>
-          {/* form div ends */}
-
-          <div className='profilePicDiv'>
-
-            <div>
-              {selectedFile && <img src={preview} className='profileImage' />}
-              <input type='file' onChange={onSelectFile} />
-            </div>
+        <Center>
+          <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"red", transform: "scale(1.05)" }} color="white" bg="black" w={{base:"30%",md:"10%"}} borderRadius={25}  mr="3%">Cancel</Button>
+          <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"grey", transform: "scale(1.05)" }} color="white" bg="black" w={{base:"30%",md:"10%"}}  borderRadius={25}  onClick={handleSubmit}>Save</Button>
+        </Center>
 
 
-          </div>
-          {/* profile pic div div ends */}
-
-        </div>
-
-        <div className='prevNextDiv'>
-          <div className='prevNextChildDiv'>
-            <button>Cancel</button>
-            <button onClick={handleSubmit}>Save</button>
-          </div>
-        </div>
-
-
-      </form>
-    </div>
+      </Box>
+    </Flex>
   )
 }

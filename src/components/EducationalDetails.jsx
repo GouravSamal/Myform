@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
-import './style.css';
+import {
+  Flex,
+  Heading,
+  Select,
+  FormControl,
+  FormLabel,
+  Input,
+  Button,
+  Center,
+  Box
+} from '@chakra-ui/react';
+import './EditProfileAndEducation.css';
 import { RxCross1 } from 'react-icons/rx';
 import { useToast } from '@chakra-ui/react';
 
@@ -17,59 +28,59 @@ export default function EducationalDetails() {
   const [country, setCountry] = useState("");
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
-  const [educationArray,setEducationArray]=useState([]);
-  
+  const [educationArray, setEducationArray] = useState([]);
+
   const date = new Date();
   const todayDay = date.getDay();
   const todayMonth = date.getMonth();
   const todayYear = date.getFullYear();
-  const today = todayYear+""+todayMonth+""+todayDay
+  const today = todayYear + "" + todayMonth + "" + todayDay
 
-  const [todate,setTodate] = useState("");
-  const [fromdate,setFromdate] = useState("");
+  const [todate, setTodate] = useState("");
+  const [fromdate, setFromdate] = useState("");
 
-  const toast = useToast(); 
+  const toast = useToast();
 
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Today",today);
+    console.log("Today", today);
 
-    if(fromdate > todate){
+    if (fromdate > todate) {
       toast({
-        title:'Error Occured',
-        description:'Please enter the valid date',
-        status:'error',
-        duration:3000,
-        isClosable:true,
-        position:'bottom'
+        title: 'Error Occured',
+        description: 'Please enter the valid date',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'bottom'
       })
       alert('Please enter the valid date')
       return;
     }
 
     // if(fromdate > today){
-      // alert('Please enter the valid beginning year')
-      // return;
+    // alert('Please enter the valid beginning year')
+    // return;
     // }
 
 
     const obj = {
-      "Qualifications":qualifications,
-      "Degree":degree,
-      "Beginning Year":beginningYear,
-      "Final Year":finalYear,
-      "Percentage":percentage,
-      "CGPA":cgpa,
-      "Specialization":specialization,
-      "University":university,
-      "Institute":institute,
-      "Country":country,
-      "State":state,
-      "City":city
+      "Qualifications": qualifications,
+      "Degree": degree,
+      "Beginning Year": beginningYear,
+      "Final Year": finalYear,
+      "Percentage": percentage,
+      "CGPA": cgpa,
+      "Specialization": specialization,
+      "University": university,
+      "Institute": institute,
+      "Country": country,
+      "State": state,
+      "City": city
     }
 
-    setEducationArray([...educationArray,obj]);
+    setEducationArray([...educationArray, obj]);
 
     setQualifications("");
     setDegree("");
@@ -84,11 +95,11 @@ export default function EducationalDetails() {
     setState("");
     setCity("");
   }
-  
-  
+
+
   console.log(educationArray);
 
-  const handlefromdate = (e) =>{
+  const handlefromdate = (e) => {
 
     setBeginneringYear(e.target.value);
     const getFromDateValue = e.target.value;
@@ -99,11 +110,11 @@ export default function EducationalDetails() {
     const setFrommonth = setFromdateformat[1];
     const setFromday = setFromdateformat[2];
 
-    const fromdate = setFromyear+""+setFrommonth+""+setFromday;
+    const fromdate = setFromyear + "" + setFrommonth + "" + setFromday;
     setFromdate(fromdate);
   }
 
-  const handletodate = (e) =>{
+  const handletodate = (e) => {
 
     setFinalYear(e.target.value);
     const getToDateValue = e.target.value;
@@ -114,167 +125,150 @@ export default function EducationalDetails() {
     const settomonth = setTodateformat[1];
     const settoday = setTodateformat[2];
 
-    const todate = settoyear+""+settomonth+""+settoday;
+    const todate = settoyear + "" + settomonth + "" + settoday;
     setTodate(todate);
   }
 
 
   return (
 
-    <div className='background_screen'>
-      <form className='educationalDetails_container'>
+    <Box justifyContent={"center"} align={"center"}>
+      <Box w={{base:"100%",md:"60%"}} pb={{base:"5%",md:"2%"}} mt={{base:"0%",md:"5%"}}  borderRadius={{base:"0px",md:"20px"}} boxShadow={"dark-lg"}>
 
-        <span className='cross_icon'><RxCross1/></span>
+        {/* <span className='cross_icon'><RxCross1 /></span> */}
 
-        <h2 className="educationalDetails_header">Educational Details</h2>
+        <Center>
+          <Heading size="lg" mt="1%" color="black">Educational Details</Heading>
+        </Center>
 
-        <div className='educationalDetails_contents'>
+        <Box  ml="3%" mr="3%">
 
-          <div className="educationalDetails_firstDiv">
+          <Flex direction={{ base: "column", md: "row" }} mt="1%" justifyContent={"space-between"} w={{ base: "100%" }}>
 
-            <div className='educationalDetails_leftdiv'>
+            <Flex direction={"column"} w={{ md: "40%" }}>
 
-              <div className='qualifications'>
-                <label className='labels'>Qualifications<span className="required">*</span></label>
-                <br />
-                <select className='qualification_select'
+              <FormControl mt="1%" >
+                <FormLabel color="black">Qualifications *</FormLabel>
+                <Select
                   onChange={(e) => setQualifications(e.target.value)}
                   value={qualifications}>
                   <option value="option 1">----</option>
                   <option value="10th">10th</option>
                   <option value="12th">12th</option>
-                </select>
-              </div>
+                </Select>
+              </FormControl>
 
-              <div>
-                
-                <label className='labels'>Degree<span className="required">*</span></label>
-                <br />
-                <input type="text"
+              <FormControl mt="1%">
+                <FormLabel color="black">Degree *</FormLabel>
+                <Input type="text"
                   value={degree}
                   onChange={(e) => setDegree(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-              <div>
-                
-                <label className='labels'>From(Year)<span className="required">*</span></label>
-                <br />
-                <input type="date"
+              <FormControl mt="1%">
+
+                <FormLabel color="black">From(Year) *</FormLabel>
+                <Input borderWidth={1} type="date"  placeholder=""
                   value={beginningYear}
                   // onChange={(e) => setBeginneringYear(e.target.value)}
                   onChange={handlefromdate}
                 />
-              </div>
+              </FormControl>
 
-              <div>
-                
-                <label className='labels'>To(Year)<span className="required">*</span></label>
-                <br />
-                <input type="date"
+              <FormControl mt="1%">
+                <FormLabel color="black">To(Year) *</FormLabel>
+                <Input borderWidth={1} type="date"
                   value={finalYear}
                   // onChange={(e) => setFinalYear(e.target.value)}
                   onChange={handletodate}
                 />
-              </div>
+              </FormControl>
 
-            </div>
+            </Flex>
 
-            <div className='educationalDetails_rightdiv'>
+            <Flex direction={"column"} w={{ md: "40%" }}>
 
-              <div>
-                
-                <label className='labels'>Percentage<span className="required">*</span></label>
-                <br />
-                <input type="text"
+              <FormControl mt="1%">
+                <FormLabel color="black">Percentage *</FormLabel>
+                <Input borderWidth={1} type="text"
                   value={percentage}
                   onChange={(e) => setPercentage(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-              <div>
-                
-                <label className='labels'>CGPA<span className="required">*</span></label>
-                <br />
-                <input type="text"
+              <FormControl mt="1%">
+                <FormLabel color="black">CGPA *</FormLabel>
+                <Input borderWidth={1} type="text"
                   value={cgpa}
                   onChange={(e) => setCgpa(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-              <div>
-                
-                <label className='labels'>Specialization<span className="required">*</span></label>
-                <br />
-                <input type="text"
+              <FormControl mt="1%">
+                <FormLabel color="black">Specialization<span className="required">*</span></FormLabel>
+                <Input borderWidth={1} type="text"
                   value={specialization}
                   onChange={(e) => setSpecialization(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-              <div>
-                <label className='labels'>University<span className="required">*</span></label>
-                <br />
-                <input type="text"
+              <FormControl mt="1%">
+                <FormLabel color="black">University *</FormLabel>
+                <Input borderWidth={1} type="text"
                   value={university}
                   onChange={(e) => setUniversity(e.target.value)}
                 />
-              </div>
+              </FormControl>
 
-            </div>
+            </Flex>
 
-          </div>
+          </Flex>
 
-          <div className='educationalDetails_middleDiv'>
-            <label className='labels'>Institute<span className="required">*</span></label>
-            <br />
-            <input type="text"
+          <FormControl w="100%" mt="1%">
+            <FormLabel color="black">Institute *</FormLabel>
+            <Input borderWidth={1} type="text"
               value={institute}
               onChange={(e) => setInstitute(e.target.value)}
             />
-          </div>
+          </FormControl>
 
-          <div className='educationalDetails_lastDiv'>
+          <Flex mt="1%" direction={{ base: "column", md: "row" }} justifyContent={{ md: "space-between" }}>
 
-            <div>
-              <label>Country<span className='required'>*</span></label>
-              <br />
-              <input className='educationalDetails_lastDiv_input' type="text"
+            <FormControl w={{ md: "30%" }}>
+              <FormLabel color="black">Country *</FormLabel>
+              <Input borderWidth={1} type="text"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
               />
-            </div>
+            </FormControl>
 
-            <div>
-              <label>State<span className='required'>*</span></label>
-              <br />
-              <input type="text" className='educationalDetails_lastDiv_input'
+            <FormControl w={{ md: "30%" }}>
+              <FormLabel color="black">State *</FormLabel>
+              <Input borderWidth={1} type="text"
                 value={state}
                 onChange={(e) => setState(e.target.value)}
               />
-            </div>
+            </FormControl>
 
-            <div>
-              <label>City<span className='required'>*</span></label>
-              <br />
-              <input type="text" className='educationalDetails_lastDiv_input'
+            <FormControl w={{ md: "30%" }}>
+              <FormLabel color="black">City *</FormLabel>
+              <Input borderWidth={1} type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
               />
-            </div>
+            </FormControl>
 
-          </div>
+          </Flex>
 
-          <div className='prevNextDiv'>
-            <div className='prevNextChildDiv'>
-              <button>Cancel</button>
-              <button onClick={handleSubmit}>Save</button>
-            </div>
-          </div>        
+          <Center mt="2%">
+            <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"red", transform: "scale(1.05)" }} color="white" w={{base:"30%",md:"10%"}} borderRadius={25} bg="black" mr="3%">Cancel</Button>
+            <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"grey", transform: "scale(1.05)" }} color="white" w={{base:"30%",md:"10%"}} borderRadius={25} bg="black" onClick={handleSubmit}>Save</Button>
+          </Center>
 
-        </div>
+        </Box>
 
-      </form>
-    </div>
+      </Box>
+    </Box>
   )
 }
