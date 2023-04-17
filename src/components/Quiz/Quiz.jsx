@@ -1,16 +1,17 @@
 import React from 'react';
-import './Quiz.css';
+import { 
+  Box,
+  Flex
+} from '@chakra-ui/react';
 import QuizSection from './QuizSection';
 
 export default function Quiz() {
   return (
-    <div className="quiz_container">
-      <div className='sidebar_section'> 
+    <Flex>
 
-      </div>
-      <div className='quiz_section'>
+      <Box w="100%" borderWidth={1}>
         <QuizSection/>
-      </div>
-    </div>
+      </Box>
+    </Flex>
   )
 }
