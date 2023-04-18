@@ -1,5 +1,5 @@
 .quiz_container {
-    background-color: black;
+    background-color: color;
     display: flex;
 }
 
@@ -28,11 +28,14 @@
 .quiz_image_section {
     border: 2px solid white;
     margin: auto 3%;
+    height:30vh;
+    width:20%;
 }
 
 .quiz_image {
-    height: 200px;
-    width: 400px;
+    border:2px solid black; 
+    height: 100%;
+    width: 100%;
 }
 
 .quiz_info {

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './CourseDetailsForm.css';
 import { FormControl, HStack, Input, Select, Flex, Button } from '@chakra-ui/react';
 
 export default function CourseDetailsForm() {

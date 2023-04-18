@@ -6,7 +6,7 @@ import UserProfile from './components/User_Profile/UserProfile';
 import Quiz from './components/Quiz/Quiz';
 import Certificates from './components/Certificates/Certificates';
 import FeedbackSection from './components/Feedback/FeedbackSection';
-import RegistrationForm from './components/Event/RegistrationForm';
+import EventRegistrationForm from './components/Event/EventRegistrationForm';
 import CourseDetailsForm from './components/Event/CourseDetailsForm';
 
 function App() {
@@ -15,12 +15,12 @@ function App() {
     {/* <EducationalDetails/> */}
     {/* <EditProfile/> */}
     {/* <Post/> */}
-    {/* <UserProfile/> */}
+    <UserProfile/>
     {/* <Quiz/> */}
     {/* <Certificates/> */}
     {/* <FeedbackSection/> */}
-    {/* <RegistrationForm/> */}
-    <CourseDetailsForm/>
+    {/* <EventRegistrationForm/> */}
+    {/* <CourseDetailsForm/> */}
    </div>
   );
 }

@@ -1,4 +1,4 @@
-import './RegistrationForm.css';
+import './EventRegistrationForm.css';
 
 import React, { useState } from 'react';
 import {
@@ -16,7 +16,7 @@ from '@chakra-ui/react';
 import { ImLocation } from 'react-icons/im';
 import { BsBuildingAdd } from 'react-icons/bs';
 
-export default function RegistrationForm() {
+export default function EventRegistrationForm() {
 
     const [email, setEmail] = useState("");
     const [mobile, setMobile] = useState("");
@@ -54,7 +54,7 @@ export default function RegistrationForm() {
 
             </div>
 
-            <div className='info_section'>
+            <Box borderWidth={1} w={{base:"100%",md:"90%"}}  mt={{base:"10%"}} ml={{base:"0%",md:"5%"}} boxShadow={"dark-lg"}>
 
                 <Flex direction={"column"} mt={{ base:"5%", md:"1%" }}>
 
@@ -97,16 +97,16 @@ export default function RegistrationForm() {
                     <FormControl w="90%" mt="1%" ml="5%">
                         <label>Type *</label>
                         <Flex direction={{ base: "column", md: "row" }} justifyContent={"space-between"}>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
                                 College Students
                             </Button>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
                                 Professional
                             </Button>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
                                 School Students
                             </Button>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }} onClick={ () => setTypeOthers(true) }>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }} onClick={ () => setTypeOthers(true) }>
                                 Others
                             </Button>
                         </Flex>
@@ -119,45 +119,42 @@ export default function RegistrationForm() {
                     <FormControl w="90%" mt="1%" mb="2%" ml="5%">
                         <label>Domain *</label>
                         <Flex direction={{ base: "column", md: "row" }} justifyContent={"space-between"}>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
                                 Management
                             </Button>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
                                 Engineering
                             </Button>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }}>
                                 Arts, Science & Commerce
                             </Button>
-                            <Button bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }} onClick={ () => setDomainOthers(true) }>
+                            <Button color='black' bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)" borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{ sm: "80%", md: "20%" }} onClick={ () => setDomainOthers(true) }>
                                 Others
                             </Button>
                         </Flex>
                         {
                             domainOthers && 
-                            <Input w="100%" mt={{base:"2%",md:"1%"}} bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)"/>
+                            <Input color='black' w="100%" mt={{base:"2%",md:"1%"}} bg="linear-gradient(90deg, rgba(254, 254, 254, 0.56) 1.09%, rgba(255, 255, 255, 0.16) 100%)"/>
                         }
                     </FormControl>
 
                 </Flex>
 
-            </div>
+            </Box>
 
 
 
             <div className="bottom_section">
-
                 <Flex justifyContent={"space-between"} w="90%" ml="5%" pb="1%">
-
-                    <Button borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{base:"40%",md:"10%"}}>
+                    <Button borderWidth={1} mt={{ base: "2%", md: "1%" }} color='black' size='md' w={{base:"40%",md:"10%"}}>
                         Prev
                     </Button>
-                    <Button borderWidth={1} mt={{ base: "2%", md: "1%" }} colorScheme='black' size='md' w={{base:"40%",md:"10%"}}>
+                    <Button borderWidth={1} mt={{ base: "2%", md: "1%" }} color='black' size='md' w={{base:"40%",md:"10%"}}>
                         Next
                     </Button>
-
                 </Flex>
-
             </div>
+
         </div>
 
     )

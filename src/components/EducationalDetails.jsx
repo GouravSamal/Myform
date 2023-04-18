@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import './EditProfileAndEducation.css';
 import { RxCross1 } from 'react-icons/rx';
+import Calendar from 'react-calendar';
 import { useToast } from '@chakra-ui/react';
 
 export default function EducationalDetails() {
@@ -133,7 +134,7 @@ export default function EducationalDetails() {
   return (
 
     <Box justifyContent={"center"} align={"center"}>
-      <Box w={{base:"100%",md:"60%"}} pb={{base:"5%",md:"2%"}} mt={{base:"0%",md:"5%"}}  borderRadius={{base:"0px",md:"20px"}} boxShadow={"dark-lg"}>
+      <Box w={{ base: "100%", md: "60%" }} pb={{ base: "5%", md: "2%" }} mt={{ base: "0%", md: "5%" }} borderRadius={{ base: "0px", md: "20px" }} boxShadow={"dark-lg"}>
 
         {/* <span className='cross_icon'><RxCross1 /></span> */}
 
@@ -141,24 +142,28 @@ export default function EducationalDetails() {
           <Heading size="lg" mt="1%" color="black">Educational Details</Heading>
         </Center>
 
-        <Box  ml="3%" mr="3%">
 
-          <Flex direction={{ base: "column", md: "row" }} mt="1%" justifyContent={"space-between"} w={{ base: "100%" }}>
+        <Box ml="3%" mr="3%">
 
-            <Flex direction={"column"} w={{ md: "40%" }}>
 
-              <FormControl mt="1%" >
+          <Flex direction="column" mt="1%" justifyContent={"space-between"} w={{ base: "100%" }}>
+
+            <Flex direction={{ base: "column", md: "row" }} justifyContent={{ md: "space-between" }}>
+
+              {/* Qualifications */}
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
                 <FormLabel color="black">Qualifications *</FormLabel>
                 <Select
                   onChange={(e) => setQualifications(e.target.value)}
                   value={qualifications}>
-                  <option value="option 1">----</option>
+                  <option value="option 1"></option>
                   <option value="10th">10th</option>
                   <option value="12th">12th</option>
                 </Select>
               </FormControl>
 
-              <FormControl mt="1%">
+              {/* Degree */}
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
                 <FormLabel color="black">Degree *</FormLabel>
                 <Input type="text"
                   value={degree}
@@ -166,19 +171,25 @@ export default function EducationalDetails() {
                 />
               </FormControl>
 
-              <FormControl mt="1%">
+            </Flex>
+
+            <Flex direction={{ base: "column", md: "row" }} justifyContent={{ md: "space-between" }}>
+
+              {/* From (Year) */}
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
 
                 <FormLabel color="black">From(Year) *</FormLabel>
-                <Input borderWidth={1} type="date"  placeholder=""
+                <Input borderWidth={1} type="date" placeholder=""
                   value={beginningYear}
                   // onChange={(e) => setBeginneringYear(e.target.value)}
                   onChange={handlefromdate}
                 />
               </FormControl>
 
-              <FormControl mt="1%">
+              {/* To (year) */}
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
                 <FormLabel color="black">To(Year) *</FormLabel>
-                <Input borderWidth={1} type="date"
+                <Input borderWidth={1} type={"date"}
                   value={finalYear}
                   // onChange={(e) => setFinalYear(e.target.value)}
                   onChange={handletodate}
@@ -187,9 +198,9 @@ export default function EducationalDetails() {
 
             </Flex>
 
-            <Flex direction={"column"} w={{ md: "40%" }}>
+            <Flex direction={{ base: "column", md: "row" }} justifyContent={{ md: "space-between" }}>
 
-              <FormControl mt="1%">
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
                 <FormLabel color="black">Percentage *</FormLabel>
                 <Input borderWidth={1} type="text"
                   value={percentage}
@@ -197,7 +208,8 @@ export default function EducationalDetails() {
                 />
               </FormControl>
 
-              <FormControl mt="1%">
+              {/* CGPA */}
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
                 <FormLabel color="black">CGPA *</FormLabel>
                 <Input borderWidth={1} type="text"
                   value={cgpa}
@@ -205,7 +217,12 @@ export default function EducationalDetails() {
                 />
               </FormControl>
 
-              <FormControl mt="1%">
+            </Flex>
+
+            <Flex direction={{ base: "column", md: "row" }} justifyContent={{ md: "space-between" }}>
+
+              {/* Specialization */}
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
                 <FormLabel color="black">Specialization<span className="required">*</span></FormLabel>
                 <Input borderWidth={1} type="text"
                   value={specialization}
@@ -213,7 +230,8 @@ export default function EducationalDetails() {
                 />
               </FormControl>
 
-              <FormControl mt="1%">
+              {/* University */}
+              <FormControl mt="1%" w={{ base: "100%", md: "40%" }}>
                 <FormLabel color="black">University *</FormLabel>
                 <Input borderWidth={1} type="text"
                   value={university}
@@ -242,7 +260,7 @@ export default function EducationalDetails() {
                 onChange={(e) => setCountry(e.target.value)}
               />
             </FormControl>
-            
+
             <FormControl w={{ md: "30%" }}>
               <FormLabel color="black">State *</FormLabel>
               <Input borderWidth={1} type="text"
@@ -262,8 +280,8 @@ export default function EducationalDetails() {
           </Flex>
 
           <Center mt="2%">
-            <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"red", transform: "scale(1.05)" }} color="white" w={{base:"30%",md:"10%"}} borderRadius={25} bg="black" mr="3%">Cancel</Button>
-            <Button transition={"all ease-in-out 100ms"} _hover={{ bg:"grey", transform: "scale(1.05)" }} color="white" w={{base:"30%",md:"10%"}} borderRadius={25} bg="black" onClick={handleSubmit}>Save</Button>
+            <Button transition={"all ease-in-out 100ms"} _hover={{ transform: "scale(1.05)" }} color="white" w={{ base: "30%", md: "10%" }} borderRadius={25} bg="black" mr="3%">Skip</Button>
+            <Button transition={"all ease-in-out 100ms"} _hover={{ transform: "scale(1.05)" }} color="white" w={{ base: "30%", md: "10%" }} borderRadius={25} bg="black" onClick={handleSubmit}>Save</Button>
           </Center>
         </Box>
 
