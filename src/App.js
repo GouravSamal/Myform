@@ -12,10 +12,10 @@ import CourseDetailsForm from './components/Event/CourseDetailsForm';
 function App() {
   return (
    <div>
-    {/* <EducationalDetails/> */}
+    <EducationalDetails/>
     {/* <EditProfile/> */}
     {/* <Post/> */}
-    <UserProfile/>
+    {/* <UserProfile/> */}
     {/* <Quiz/> */}
     {/* <Certificates/> */}
     {/* <FeedbackSection/> */}

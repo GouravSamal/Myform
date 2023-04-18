@@ -174,13 +174,18 @@ export default function EditProfile() {
                     id="image-input"
                 />
                 {
-                  userImage && 
+                  userImage ? 
                     <Avatar size="2xl"
                       mt={{base:"0%",md:"5%"}}
                       src={URL.createObjectURL(userImage.file)}
                       alt="Uploaded image"
                       objectFit="cover"
                     />
+                    :
+                    <Avatar 
+                    mb="5%" 
+                    size={{base:"xl",md:"2xl"}} 
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWB-3sfDKJdZD7ZyJz903Rr_zz6soTg_iGBw&usqp=CAU" />
                 }
                 <label htmlFor="image-input">
                     <Button

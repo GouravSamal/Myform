@@ -196,6 +196,7 @@ export default function EducationalDetails() {
                 />
               </FormControl>
 
+
             </Flex>
 
             <Flex direction={{ base: "column", md: "row" }} justifyContent={{ md: "space-between" }}>
