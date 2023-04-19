@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react';
 import './EditProfileAndEducation.css';
 import { RxCross1 } from 'react-icons/rx';
-import Calendar from 'react-calendar';
 import { useToast } from '@chakra-ui/react';
 
 export default function EducationalDetails() {
