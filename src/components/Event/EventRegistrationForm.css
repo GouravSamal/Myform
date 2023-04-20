@@ -1,40 +1,6 @@
-.registration_form_container{
-    background-color: white;
-    color:black;
-    /* height:100vh; */
-}
 
-.top_section{
-    padding-top:1%;
-    text-align:center;
-    padding-bottom: 2%;
-    border-bottom:2px solid black;
-    position: relative;
-}
-
-.location_info{
-    position: absolute;
-    margin-left:43%;
-    margin-top: 1%;
-    background-color: white;
-    padding:0 1%;
-}
 
 .info_section{
     border:2px solid blue;
     margin-top:2% ;
-}
-
-.bottom_section{
-    margin-top: 1%;
-    border:2px solid green;
-}
-
-
-@media (max-width:500px) {
-
-    .location_info{
-        margin-left:20%;
-    }
-    
 }

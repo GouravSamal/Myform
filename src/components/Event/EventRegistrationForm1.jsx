@@ -1,4 +1,3 @@
-import './EventRegistrationForm.css';
 
 import React, { useState } from 'react';
 import {
@@ -16,7 +15,7 @@ from '@chakra-ui/react';
 import { ImLocation } from 'react-icons/im';
 import { BsBuildingAdd } from 'react-icons/bs';
 
-export default function EventRegistrationForm() {
+export default function EventRegistrationForm1() {
 
     const [email, setEmail] = useState("");
     const [mobile, setMobile] = useState("");
@@ -27,34 +26,38 @@ export default function EventRegistrationForm() {
     const [typeOthers,setTypeOthers] = useState(false);
     const [domainOthers,setDomainOthers] = useState(false);
 
+    const [eventtitle,setEventtitle]=useState("Java Backend Developer");
+    const [eventlocation,setEventlocation]=useState("Mumbai");
+    const [eventcompany,setEventCompany]=useState("VMWare");
+
     return (
 
-        <div className='registration_form_container'>
+        <Box bg="white" color="black">
 
-            <div className='top_section'>
+            <Box textAlign="center"  pt={{md:"1%"}} pb={{md:"2%",base:"3%"}} borderBottomWidth={2}  borderColor="black" position="relative" >
 
-                <Heading size="md"> Java Backend Developer </Heading>
+                <Heading size="md"> { eventtitle } </Heading>
 
-                <Box className='location_info'>
+                <Box position="absolute" ml={{md:"43%",base:"22%"}} mt={{ md:"1%" }} bgColor="white"  p={{ md:"0 1%",base:"0 2%" }}>
                     <HStack spacing="10px">
 
                         <HStack>
                             <BsBuildingAdd />
-                            <Text> VMWare </Text>
+                            <Text> { eventcompany } </Text>
                         </HStack>
 
                         <HStack>
                             <ImLocation />
-                            <Text> Mumbai  </Text>
+                            <Text> { eventlocation }  </Text>
                         </HStack>
 
                     </HStack>
                 </Box>
 
 
-            </div>
+            </Box>
 
-            <Box borderWidth={1} w={{base:"100%",md:"90%"}}  mt={{base:"10%"}} ml={{base:"0%",md:"5%"}} boxShadow={"dark-lg"}>
+            <Box borderRadius={{md:"25",base:"0"}} borderWidth={1} w={{base:"100%",md:"90%"}}  mt={{base:"10%",md:"1%"}} ml={{base:"0%",md:"5%"}} boxShadow={"dark-lg"}>
 
                 <Flex direction={"column"} mt={{ base:"5%", md:"1%" }}>
 
@@ -142,20 +145,7 @@ export default function EventRegistrationForm() {
 
             </Box>
 
-
-
-            <div className="bottom_section">
-                <Flex justifyContent={"space-between"} w="90%" ml="5%" pb="1%">
-                    <Button borderWidth={1} mt={{ base: "2%", md: "1%" }} color='black' size='md' w={{base:"40%",md:"10%"}}>
-                        Prev
-                    </Button>
-                    <Button borderWidth={1} mt={{ base: "2%", md: "1%" }} color='black' size='md' w={{base:"40%",md:"10%"}}>
-                        Next
-                    </Button>
-                </Flex>
-            </div>
-
-        </div>
+        </Box>
 
     )
 }

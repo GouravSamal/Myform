@@ -6,21 +6,23 @@ import UserProfile from './components/User_Profile/UserProfile';
 import Quiz from './components/Quiz/Quiz';
 import Certificates from './components/Certificates/Certificates';
 import FeedbackSection from './components/Feedback/FeedbackSection';
-import EventRegistrationForm from './components/Event/EventRegistrationForm';
-import CourseDetailsForm from './components/Event/CourseDetailsForm';
+import EventRegistrationForm1 from './components/Event/EventRegistrationForm1';
+import EventRegistrationForm2 from './components/Event/EventRegistrationForm2';
+import EventForm from './components/Event/EventForm';
 
 function App() {
   return (
    <div>
-    <EducationalDetails/>
+    {/* <EducationalDetails/> */}
     {/* <EditProfile/> */}
     {/* <Post/> */}
     {/* <UserProfile/> */}
     {/* <Quiz/> */}
     {/* <Certificates/> */}
     {/* <FeedbackSection/> */}
-    {/* <EventRegistrationForm/> */}
-    {/* <CourseDetailsForm/> */}
+    <EventForm/>
+    {/* <EventRegistrationForm1/> */}
+    {/* <EventRegistrationForm2/> */}
    </div>
   );
 }
