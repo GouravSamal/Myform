@@ -1,8 +1,4 @@
-.ticket_container{
-    background-color:white;
-    min-height: 75vh;
-    color:black;
-}
+
 
 .top_section{
     padding-top: 2%;
@@ -24,10 +20,14 @@
 
     .location_info{
         position: absolute;
-        margin-left:25%;
-        margin-top: 1%;
+        margin-left:18%;
+        margin-top: 3%;
         background-color: white;
-        padding:0 1%;
+        padding:0 2%;
+    }
+
+    .top_section{
+        padding-bottom: 7%;
     }
 
 }

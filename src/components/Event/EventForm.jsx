@@ -82,7 +82,7 @@ function EventForm() {
           mx={"auto"}
           // borderWidth={1}
           // borderColor={"white"}
-          width={{ md: "90%", sm: "100%" }}
+          width={{ md: "90%", base: "100%" }}
           py={12}
           px={6}
         >

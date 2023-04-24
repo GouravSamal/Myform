@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./EventRegistrationForm3.css";
-
 import {
   Flex,
   Center,
@@ -21,12 +19,12 @@ import { ImLocation } from "react-icons/im";
 
 function EventRegistrationForm3() {
   return (
-    <>
 
-      <div className="ticket_container">
-        <div className="top_section">
+    <>
+      <Box bgColor="white" minH="75vh" color="black">
+        <Box pt="2%" textAlign="center" pb={{base:"7%",md:"2%"}} borderBottomWidth={2} borderBottomColor="black" position="relative">
           <Heading size="md"> Java Backend Developer </Heading>
-          <Box className="location_info">
+          <Box position="absolute" bgColor="white" ml={{base:"18%",md:"43%"}} mt={{base:"3%",md:"1%"}} p={{base:"0 2%",md:"0 1%"}}>
             <HStack spacing="10px">
               <HStack>
                 <BsBuildingAdd />
@@ -39,7 +37,7 @@ function EventRegistrationForm3() {
               </HStack>
             </HStack>
           </Box>
-        </div>
+        </Box>
         <br />
         <br />
 
@@ -203,7 +201,7 @@ function EventRegistrationForm3() {
             </Box>
           </Flex>
           </Box>
-      </div>
+      </Box>
     </>
   );
 }
