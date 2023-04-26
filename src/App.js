@@ -9,6 +9,7 @@ import FeedbackSection from './components/Feedback/FeedbackSection';
 import EventRegistrationForm1 from './components/Event/EventRegistrationForm1';
 import EventRegistrationForm2 from './components/Event/EventRegistrationForm2';
 import EventForm from './components/Event/EventForm';
+import MyEventsSection from './components/MyEvents/MyEventsSection';
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
     {/* <Quiz/> */}
     {/* <Certificates/> */}
     {/* <FeedbackSection/> */}
-    <EventForm/>
+    {/* <EventForm/> */}
     {/* <EventRegistrationForm1/> */}
     {/* <EventRegistrationForm2/> */}
+    <MyEventsSection/>
    </div>
   );
 }

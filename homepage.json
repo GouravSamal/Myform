@@ -315,6 +315,35 @@
             "likes":true,
             "dislikes":false
         }
-
-    ]
+    ],
+    "myevents": [
+        {
+          "id": 1,
+          "title": "Java backend developer",
+          "compaName": "vmware",
+          "views": 200,
+          "status": "Active"
+        },
+        {
+          "id": 2,
+          "title": "Python backend developer",
+          "compaName": "malware",
+          "views": 600,
+          "status": "inActive"
+        },
+        {
+          "id": 3,
+          "title": "Java backend developer",
+          "compaName": "vmware",
+          "views": 300,
+          "status": "inActive"
+        },
+        {
+          "id": 4,
+          "title": "Python backend developer",
+          "compaName": "malware",
+          "views": 500,
+          "status": "Active"
+        }
+      ]
 }
